@@ -17,6 +17,25 @@
         app:layout_constraintStart_toEndOf="@id/signs"
         app:layout_constraintTop_toTopOf="parent">
 
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/theme_changer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:thumbTint="@color/white"
+            android:visibility="gone"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/icon_theme"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/theme_changer"
+            app:layout_constraintEnd_toStartOf="@id/theme_changer"
+            android:src="@drawable/ic_sun_icon"/>
+
         <TextView
             android:id="@+id/top_screen"
             style="@style/TextViewTopMonitorPortrait"
