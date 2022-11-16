@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ButtonStyleForPortrait">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_for_buttons</item>
+        <item name="cornerRadius">@dimen/cr_for_buttons</item>
+    </style>
+
+    <style name="ButtonStyleForPortrait.Landscape">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_for_buttons_landscape</item>
+        <item name="cornerRadius">@dimen/cr_for_buttons</item>
+    </style>
+
+    <style name="TextViewTopMonitorPortrait">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">end|bottom</item>
+        <item name="android:textSize">@dimen/text_size_screen</item>
+        <item name="layout_constraintVertical_weight">2</item>
+    </style>
+
+    <style name="TextViewTopMonitorPortrait.BottomMonitor">
+        <item name="layout_constraintVertical_weight">1</item>
+    </style>
+
+    <style name="TextViewTopMonitorPortrait.BottomMonitor.Landscape">
+        <item name="android:gravity">end|top</item>
+    </style>
+
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cr_for_buttons">50dp</dimen>
+    <dimen name="text_size_for_buttons">25sp</dimen>
+    <dimen name="text_size_for_buttons_landscape">15sp</dimen>
+    <dimen name="text_size_screen">30sp</dimen>
+</resources>

@@ -19,29 +19,23 @@
 
         <TextView
             android:id="@+id/top_screen"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            style="@style/TextViewTopMonitorPortrait"
+            android:textSize="@dimen/text_size_screen"
             app:layout_constraintBottom_toTopOf="@id/bottom_screen"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_weight="2"
-            tools:text="Top Screen"
-            android:textSize="30sp"
-            android:gravity="end|bottom"/>
+            tools:text="Top Screen" />
 
         <TextView
             android:id="@+id/bottom_screen"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            style="@style/TextViewTopMonitorPortrait.BottomMonitor"
+            android:textSize="@dimen/text_size_screen"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/top_screen"
-            app:layout_constraintVertical_weight="1"
-            tools:text="Bottom Screen"
-            android:textSize="30sp"
-            android:gravity="end|bottom"/>
+            tools:text="Bottom Screen"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -58,12 +52,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_clear"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_clear"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_7"
             app:layout_constraintEnd_toStartOf="@id/key_back"
             app:layout_constraintHeight_percent="0.18"
@@ -73,12 +63,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_back"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_back"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_8"
             app:layout_constraintEnd_toStartOf="@id/key_percent"
             app:layout_constraintHeight_percent="0.18"
@@ -88,12 +74,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_percent"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_percent"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_multi"
             app:layout_constraintEnd_toStartOf="@id/key_divide"
             app:layout_constraintHeight_percent="0.18"
@@ -103,12 +85,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_divide"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_divide"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_multi"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.18"
@@ -118,28 +96,19 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_7"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_7"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_4"
             app:layout_constraintEnd_toEndOf="@id/key_clear"
             app:layout_constraintHeight_percent="0.18"
-
             app:layout_constraintStart_toStartOf="@id/key_clear"
             app:layout_constraintTop_toBottomOf="@id/key_clear"
             app:layout_constraintWidth_percent="0.2" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_8"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_8"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_5"
             app:layout_constraintEnd_toEndOf="@id/key_back"
             app:layout_constraintHeight_percent="0.18"
@@ -149,12 +118,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_9"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_9"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_6"
             app:layout_constraintEnd_toEndOf="@id/key_percent"
             app:layout_constraintHeight_percent="0.18"
@@ -164,12 +129,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_multi"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_multi"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_minus"
             app:layout_constraintEnd_toEndOf="@id/key_divide"
             app:layout_constraintHeight_percent="0.18"
@@ -179,12 +140,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_4"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_4"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_1"
             app:layout_constraintEnd_toEndOf="@id/key_7"
             app:layout_constraintHeight_percent="0.18"
@@ -194,12 +151,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_5"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_5"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_2"
             app:layout_constraintEnd_toEndOf="@id/key_8"
             app:layout_constraintHeight_percent="0.18"
@@ -209,12 +162,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_6"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_6"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_3"
             app:layout_constraintEnd_toEndOf="@id/key_9"
             app:layout_constraintHeight_percent="0.18"
@@ -224,12 +173,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_minus"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_minus"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_plus"
             app:layout_constraintEnd_toEndOf="@id/key_multi"
             app:layout_constraintHeight_percent="0.18"
@@ -239,12 +184,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_1"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_0"
             app:layout_constraintEnd_toEndOf="@id/key_4"
             app:layout_constraintHeight_percent="0.18"
@@ -254,12 +195,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_2"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_0"
             app:layout_constraintEnd_toEndOf="@id/key_5"
             app:layout_constraintHeight_percent="0.18"
@@ -269,12 +206,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_3"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_3"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_dot"
             app:layout_constraintEnd_toEndOf="@id/key_6"
             app:layout_constraintHeight_percent="0.18"
@@ -284,12 +217,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_plus"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_plus"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@id/key_result"
             app:layout_constraintEnd_toEndOf="@id/key_minus"
             app:layout_constraintHeight_percent="0.18"
@@ -299,12 +228,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_0"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_0"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/key_2"
             app:layout_constraintHeight_percent="0.18"
@@ -313,12 +238,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_dot"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_dot"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/key_3"
             app:layout_constraintHeight_percent="0.18"
@@ -328,12 +249,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_result"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/ButtonStyleForPortrait"
             android:text="@string/key_result"
-            android:textColor="@color/black"
-            app:cornerRadius="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/key_plus"
             app:layout_constraintHeight_percent="0.18"

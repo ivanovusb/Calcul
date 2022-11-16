@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">CALCULATOR</string>
-    <string name="key_clear">C</string>
-    <string name="key_back">B</string>
+    <string name="app_name">КАЛЬКУЛЯТОР</string>
+    <string name="key_clear">С</string>
+    <string name="key_back">Back</string>
     <string name="key_percent">%</string>
     <string name="key_divide">/</string>
     <string name="key_7">7</string>
