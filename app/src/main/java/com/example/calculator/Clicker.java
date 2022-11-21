@@ -8,20 +8,22 @@ import java.io.Serializable;
 public class Clicker implements Serializable {
     private final TextView bottomScreen;
     private final TextView topScreen;
-    private double firstValue = 0;
-    private double secondValue = 0;
+    private double firstValue;
+    private double secondValue;
     private double result;
     String getSign;
     Boolean restart = false;
+
 
     public Clicker(TextView bottomScreen, TextView topScreen) {
         this.bottomScreen = bottomScreen;
         this.topScreen = topScreen;
     }
 
+
     public void print(View view, CharSequence text) {
         view.setOnClickListener(v -> {
-            if (restart && topScreen.getText() == null) {
+            if (restart && firstValue == 0) {
                 restart();
             }
             restart = false;
@@ -108,10 +110,9 @@ public class Clicker implements Serializable {
     }
 
     public void restart() {
-        firstValue = 0;
-        secondValue = 0;
+        topScreen.append(bottomScreen.getText());
+        topScreen.append("\n");
         bottomScreen.setText("");
-        topScreen.setText("");
         getSign = "";
     }
 

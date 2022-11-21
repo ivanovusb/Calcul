@@ -4,11 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.16337386018237082" />
+        <entry key="app/src/main/res/drawable/ic_browser.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_moon_ic.xml" value="0.167" />
         <entry key="app/src/main/res/drawable/ic_moon_icon.xml" value="0.167" />
+        <entry key="app/src/main/res/drawable/ic_paint_box.xml" value="0.167" />
+        <entry key="app/src/main/res/drawable/ic_paint_box_50x55.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_sun_icon.xml" value="0.167" />
         <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.40446304044630405" />
+        <entry key="app/src/main/res/layout/activity_theme_selection.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/item_theme.xml" value="0.3098958333333333" />
       </map>
     </option>
   </component>
