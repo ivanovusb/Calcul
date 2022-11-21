@@ -1,13 +1,13 @@
 package com.example.calculator;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.TextView;
 
 import java.io.Serializable;
 
-public class Clicker implements Serializable {
-    private final TextView bottomScreen;
-    private final TextView topScreen;
+public class Clicker implements Parcelable {
     private double firstValue;
     private double secondValue;
     private double result;
@@ -15,23 +15,42 @@ public class Clicker implements Serializable {
     Boolean restart = false;
 
 
-    public Clicker(TextView bottomScreen, TextView topScreen) {
-        this.bottomScreen = bottomScreen;
-        this.topScreen = topScreen;
+    public Clicker() {
     }
 
 
-    public void print(View view, CharSequence text) {
+    protected Clicker(Parcel in) {
+        firstValue = in.readDouble();
+        secondValue = in.readDouble();
+        result = in.readDouble();
+        getSign = in.readString();
+        byte tmpRestart = in.readByte();
+        restart = tmpRestart == 0 ? null : tmpRestart == 1;
+    }
+
+    public static final Creator<Clicker> CREATOR = new Creator<Clicker>() {
+        @Override
+        public Clicker createFromParcel(Parcel in) {
+            return new Clicker(in);
+        }
+
+        @Override
+        public Clicker[] newArray(int size) {
+            return new Clicker[size];
+        }
+    };
+
+    public void print(TextView bottomScreen, TextView topScreen, View view, CharSequence text) {
         view.setOnClickListener(v -> {
             if (restart && firstValue == 0) {
-                restart();
+                restart(bottomScreen, topScreen);
             }
             restart = false;
             bottomScreen.append(text);
         });
     }
 
-    public void getFirstValue(View view, String sign) {
+    public void getFirstValue(TextView bottomScreen, TextView topScreen,View view, String sign) {
         view.setOnClickListener(v -> {
             if (bottomScreen.length() > 0) {
                 firstValue = Double.parseDouble(String.valueOf(bottomScreen.getText()));
@@ -43,7 +62,7 @@ public class Clicker implements Serializable {
     }
 
 
-    public void getResult(View view) {
+    public void getResult(TextView bottomScreen, TextView topScreen,View view) {
         view.setOnClickListener(v -> {
             if (getSign != null && bottomScreen.length() > 0) {
                 secondValue = Double.parseDouble(String.valueOf(bottomScreen.getText()));
@@ -79,7 +98,7 @@ public class Clicker implements Serializable {
         });
     }
 
-    public void clear(View view) {
+    public void clear(TextView bottomScreen, TextView topScreen,View view) {
         view.setOnClickListener(v -> {
             firstValue = 0;
             secondValue = 0;
@@ -90,7 +109,7 @@ public class Clicker implements Serializable {
         });
     }
 
-    public void back(View view) {
+    public void back(TextView bottomScreen, TextView topScreen,View view) {
         view.setOnClickListener(v -> {
             try {
                 if (bottomScreen.length() > 0) {
@@ -109,11 +128,25 @@ public class Clicker implements Serializable {
         });
     }
 
-    public void restart() {
+    public void restart(TextView bottomScreen, TextView topScreen) {
         topScreen.append(bottomScreen.getText());
         topScreen.append("\n");
         bottomScreen.setText("");
         getSign = "";
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeDouble(firstValue);
+        dest.writeDouble(secondValue);
+        dest.writeDouble(result);
+        dest.writeString(getSign);
+        dest.writeByte((byte) (restart == null ? 0 : restart ? 1 : 2));
     }
 
 
